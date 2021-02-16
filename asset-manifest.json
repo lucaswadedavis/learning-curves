@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/learning-curves/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/learning-curves/static/js/main.8a5bf074.chunk.js",
-    "main.js.map": "/learning-curves/static/js/main.8a5bf074.chunk.js.map",
+    "main.css": "/learning-curves/static/css/main.833ad9df.chunk.css",
+    "main.js": "/learning-curves/static/js/main.ff8b152c.chunk.js",
+    "main.js.map": "/learning-curves/static/js/main.ff8b152c.chunk.js.map",
     "runtime-main.js": "/learning-curves/static/js/runtime-main.1c17bfa1.js",
     "runtime-main.js.map": "/learning-curves/static/js/runtime-main.1c17bfa1.js.map",
-    "static/js/2.f0dc1442.chunk.js": "/learning-curves/static/js/2.f0dc1442.chunk.js",
-    "static/js/2.f0dc1442.chunk.js.map": "/learning-curves/static/js/2.f0dc1442.chunk.js.map",
+    "static/js/2.15c32583.chunk.js": "/learning-curves/static/js/2.15c32583.chunk.js",
+    "static/js/2.15c32583.chunk.js.map": "/learning-curves/static/js/2.15c32583.chunk.js.map",
     "static/js/3.e4e11403.chunk.js": "/learning-curves/static/js/3.e4e11403.chunk.js",
     "static/js/3.e4e11403.chunk.js.map": "/learning-curves/static/js/3.e4e11403.chunk.js.map",
     "index.html": "/learning-curves/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/learning-curves/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.f0dc1442.chunk.js.LICENSE.txt": "/learning-curves/static/js/2.f0dc1442.chunk.js.LICENSE.txt"
+    "static/css/main.833ad9df.chunk.css.map": "/learning-curves/static/css/main.833ad9df.chunk.css.map",
+    "static/js/2.15c32583.chunk.js.LICENSE.txt": "/learning-curves/static/js/2.15c32583.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1c17bfa1.js",
-    "static/js/2.f0dc1442.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.8a5bf074.chunk.js"
+    "static/js/2.15c32583.chunk.js",
+    "static/css/main.833ad9df.chunk.css",
+    "static/js/main.ff8b152c.chunk.js"
   ]
 }
