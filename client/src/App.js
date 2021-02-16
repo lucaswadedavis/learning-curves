@@ -1,8 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
-import { sim } from './sim';
 import random from 'random';
 import './App.css';
+
+function sim(world, dimensions=1, limit=100) {
+  let w = [...world];
+  let rec = [];
+  let eff = 0;
+  for (let i = 0; i < limit; i++) {
+    const index = Math.random() * w.length | 0;
+    eff += w[index];
+    w[index] = 0;
+    rec.push(eff);
+  }
+  return rec; 
+}
 
 function World(n=100, generator=() => 0.5) {
   let w = [];
@@ -43,7 +55,6 @@ function AnimatedExample() {
   }, []);
   return (
     <div className="animated-example-area">
-      <h2>Example</h2>
       <div>
         <Bar
           data={ shapeForChartJs(world) }
@@ -62,6 +73,17 @@ function AnimatedExample() {
           options={{ maintainAspectRatio: false }}
           /> 
       </div>
+      <p>
+        I've tried to illustrate this idea in the example
+        above by representing the information space on the
+        first of the two graphs. The Y axis is the utility
+        of the insight, and the X axis just represents the
+        information space. As you randomly wander around
+        the space, the bars representing insight disappear
+        and are added to the learning curve line graph
+        below it. As time goes on, all the available insights
+        are harvested and the learning curve plateaus.
+      </p>
     </div>
   );
 }
@@ -217,17 +239,72 @@ function ExponentialDistribution() {
   );
 }
 
+function Closing() {
+  return (
+    <div>
+      <p>
+        I think the thing that most surprised me
+        about this was how similar sampling from
+        the different distributions looks. I expected
+        the exponential distribution to be really
+        different from the uniform distribution, but
+        I don't think I could honestly eyeball the
+        difference with any confidence if I had to.
+      </p>
+    </div>
+  );
+}
 
+function Exposition() {
+  return (
+    <div>
+      <p>
+        Below I experimented with a sampling from a few
+        different distributions. I ran these for 1000
+        steps, rather than the 500 steps from the
+        example above.
+      </p>
+    </div>
+  );
+}
+
+function Intro() {
+  return (
+    <div>
+      <h1>Learning Curves</h1>
+      <p>
+        So, the probably half-baked idea is that
+        information space is saturated with good ideas
+        or put a different way, compressible information,
+        and that knocking around in that information space
+        will lead to a gradual accumulation of these
+        insights, which manifest in increased efficiency.
+      </p>
+      <p>
+        The trick is that once you stumble across an insight
+        you can't gain the same increase in efficiency by
+        stumbling across the same one again, and if you're
+        building a table or welding together a steel boat
+        hull, you're going to wind up crossing the same
+        parts of information space over and over, making it
+        even less likely that you'll learn anything new.
+      </p>
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
+      <Intro />
       <AnimatedExample />
+      <Exposition />
       <UniformDistribution />
       <PoissonDistribution />
       <NormalDistribution />
       <LogNormalDistribution />
       <ExponentialDistribution />
+      <Closing />
     </div>
   );
 }
